@@ -1,0 +1,223 @@
+@charset "utf-8";
+@import url(font-awesome.min.css);
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
+/*reset*/
+*{margin: 0;padding: 0;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0; font-weight: 700;text-decoration: inherit;}
+img{vertical-align:middle;}
+li{list-style: none;}
+a{border:none;color: inherit;text-decoration: inherit;}
+/*layout*/
+body{
+    font-size: 14px;
+    font-family: 'NanumSquare', sans-serif;
+}
+.wrap{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    background: url(../img/home_bg2.png);
+}
+.content{
+    width:100%;
+    min-height:auto;
+    margin: 0 auto;
+    overflow: hidden;
+    color: #fff;
+}
+
+
+
+.header .innerHeader{
+    width: 1800px;
+    height: 200px;
+    line-height: 200px;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+.header .innerHeader .logo{
+    float: left;
+}
+.header .innerHeader .logo a{
+    width: 100px;
+    display: block;
+}
+.header .innerHeader .logo a img{
+    width: 100%;
+}
+
+.header .innerHeader .gnb{
+    float: left;
+    margin-left: 300px;
+}
+.header .innerHeader .gnb ul li{
+    float: left;
+    margin-right: 180px;
+    font-size: 24px;
+    color: #fff;
+    display: block;
+    font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+.header .innerHeader .gnb .gnb_ul{
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    
+}
+.choice{
+    width: 161px;
+    height: 127px;
+    display: inline-block;
+    background: #FFD500;
+    position: absolute;
+    top: 549px;
+    right: -50px;
+    z-index: -1;
+    opacity: 0.8;
+    transition: 0.7s;
+}
+.choice:hover{
+    opacity: 1;
+}
+
+.header .innerHeader .gnb ul li:hover .choice{
+     opacity: 1;   
+}
+.not_choice{
+    opacity: 0.7;
+    font-weight: 100;
+    transition: all 0.2s;
+}
+.not_choice:hover{
+    opacity: 1;
+}
+.main .mypicture {
+    margin-left: 460px;
+    margin-top: 0px;
+}
+.main .mypicture .img_one{
+    width: 500px;
+    height: 700px;
+    background: #707070;
+    float: left;
+    overflow: hidden;
+}
+.main .mypicture .img_one img{
+    
+}
+.main .mypicture .two_imgbox{
+    float: left;
+    margin-left: 10px;
+}
+.main .mypicture .img_two{
+    width: 500px;
+    height: 200px;
+    background: #707070;  
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.main .mypicture .img_three{
+    width: 500px;
+    height: 490px;
+    background: #707070;
+    overflow: hidden;
+}
+.main {
+    position: relative;
+}
+.main .title{
+    position: absolute;
+    top: 250px;
+    left: 1000px;
+}
+.main .title .img{
+    width: 200px;
+    overflow: hidden;
+}
+
+.main .title .img img{
+    width: 100%;
+}
+.main .title .myname{
+    font-size: 20px;
+    margin-bottom: 50px;
+    font-weight: 100;
+}
+.main .title .myname span{
+    font-size: 15px;
+}
+.main .title .sub_tit{
+    float: left;
+
+
+}
+.main .title .st_l{
+    margin-right: 28px;
+    font-size: 22px;    
+    opacity: 0.8;
+    line-height: 2;  
+    font-weight: 100;
+}
+.main .title .st_r{
+    font-size: 18px;
+    line-height: 2.5;    
+}
+
+.call{
+    width: 150px;
+    overflow: hidden;
+    position: absolute;
+    top:550px;
+    left: 1660px;
+    
+}
+.call:hover .choice{
+    opacity: 1;
+}
+.call img{
+    width: 100%;
+
+}
+.wobble-hor-bottom:hover {
+	-webkit-animation: wobble-hor-bottom 0.8s both;
+	        animation: wobble-hor-bottom 0.8s both;
+}
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-20px) rotate(-6deg);
+            transform: translateX(-20px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(10px) rotate(6deg);
+            transform: translateX(10px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+
+
+

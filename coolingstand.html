@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>coolingstand</title>
+    <link rel="stylesheet" href="css/coolingstand.css">
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <link href="css/scroll_basic.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script>
+    <link href="css/animate.min.css" rel="stylesheet">
+	<link href="css/scroll_basic.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />   
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />   
+</head>
+<body class="sub scroll-basic" >
+<div id="wrap">
+        <header>
+            <div class="header">
+                    <div class="innerHeader trans">
+                       <div class="header_bg"></div>
+                        <h1 class="logo"><a href="index.html"><img class="change_1" src="img/logo_black.png" alt="로고"><img class="change_2" src="img/logo_white.png" alt="로고"></a></h1>
+                        <div class="exitbox">
+                           <div class="menu_bg"></div>
+                                <a href="work.html"><p class="exit_1"><img src="img/exit4.png" alt=""></p>
+                                   <p class="exit_2"><img src="img/exit3.png" alt=""></p>
+                                    <svg id="svg" viewBox="0 0 200 200">
+                                    <circle class="circle" cx="100" cy="100" r="95" stroke="#231f20" stroke-width="2.5" fill-opacity="0" />
+                                                                </svg></a>
+                        </div>                        
+                    </div>
+
+            </div>
+                          
+        </header>
+        <div class="main">
+            <section class="Plan">
+                <div class="content">
+                   <p class="sub">COOLINGTAND</p>
+                    <h1>기획의도</h1>
+                    
+                    <p class="txt animate" data-animate="fadeInDown" data-duration="1.0s" data-delay="0.2s" data-offset="50">쿨링 스탠드의 특징과 제품을 설명한 상세페이지입니다.<br>
+전체적으로 상품을 꽉차게 표현하여 소비자가<br>
+상품에 집중할 수 있도록 페이지를 제작하였습니다.</p>
+                </div>
+            </section> 
+            <section class="page">
+                <div class="content">
+                    <p class="img">
+                        <img src="img/coolingstand_detailpage.jpg" alt="">
+                    </p>
+                </div>
+            </section>
+        
+                
+           
+            <section class="different">
+                <div class="content">
+                       <div class="prevBox box">
+                           <a href="mara.html">
+                            <i class="fas fa-long-arrow-alt-left"></i>
+                            <div class="txt">
+                                <span>LOGO DESIGN</span>
+                                <p class="prev">JEONBUMARA</p>
+                            </div>
+                           </a>
+                       </div>
+                    <div class="nextBox box">
+                        
+                    </div> 
+                    </div>               
+            </section>
+        </div>
+        <footer>
+            <div class="footer_inner">
+                <ul class="ft_gnb">
+                    <li><a href="index.html"><span class="line_wrap"><span class="line_md"></span>HOME</span></a></li>
+                    <li><a href="about.html"><span class="line_wrap"><span class="line_md"></span>ABOUT</span></a></li>
+                    <li><a href="about.html"><span class="line_wrap"><span class="line_md"></span>WORK</span></a></li>
+                    
+                    
+                </ul>  
+                <div class="line"></div>             
+                <div class="ft_bottom">
+                    <h2 class="ftlogo ft"><a href="index.html"><img src="img/logo_white.png" alt=""></a></h2>
+                    <ul class="ftinfo ft">
+                        <li>한소영<span>HANSOYOUNG</span></li>
+                        <li>WEB PUBLISHER</li>
+                        <li>010-5385-4427</li>
+                    </ul>
+                    <p class="sub_logo ft"><img src="img/sub_logo2.png" alt="서브로고"></p>
+                </div>
+
+            </div>
+        </footer>         
+    </div>   
+<script type="text/javascript" >
+        // 메뉴를 생성합니다.
+
+$(function(){
+
+    $("#menu").multiOpenMenu();
+
+});
+
+//]]>
+'use strict';
+    
+$('.animate').scrolla({
+    mobile: false, //모바일버전시 해제
+    once: false //스크롤시 딱 한번만 하고싶을땐 true
+});    
+    
+//고정헤더, 사이드바 이벤트
+var scrollTop = 0;
+scrollTop = $(document).scrollTop();
+fixHeader();
+sideBar();
+//윈도우창 조절시에 이벤트
+$(window).on('scroll resize', function() {
+    scrollTop = $(document).scrollTop();
+    fixHeader();
+    sideBar();
+});
+
+//고정헤더 함수
+function fixHeader() {
+    if (scrollTop > 200) { //스크롤탑이 200이상일때부터 헤더고정
+        $('header').addClass('on');
+    } else {
+        $('header').removeClass('on');
+    }
+}
+//사이드바 함수
+function sideBar() {
+    $('#aside').css({'top': (scrollTop + 150) + 'px'});
+}
+    </script>             
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

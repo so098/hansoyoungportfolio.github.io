@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSR</title>
+    <link rel="stylesheet" href="css/csr.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />   
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />    
+    <script>
+          function fnMove(seq){
+        var offset = $("#div" + seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 400);
+    }
+        function showHide(id) {
+
+            var obj = document.getElementById(id);
+
+            if (obj.style.display == 'none')
+
+                obj.style.display = 'block';
+
+            else
+
+                obj.style.display = 'none';
+
+        }   
+    </script>
+</head>
+<body>
+    <div class="wrap" id="csr">
+        <header>
+            <div class="innerHeader">
+                <h1 class="logo"><a href="index.html"><img src="img/logo_fff.png" alt="하얀색로고"></a></h1>
+                  <div class="menu_bar">
+                        <a id="burger" onclick="showHide('name')" onfocus="this.blur()"></a>
+                        <div id=name style="display:none">
+                           <div class="gnb_top">
+                               <h1><a href="index.html"></a></h1>
+                               <p class="top_sign"><a href="login.html"><img src="img/user.png" alt="로그인"></a></p>
+                               <div class="b-close">
+                                   <a onclick="showHide('name')" onfocus="this.blur()"></a>
+                               </div>
+                           </div>
+                            <ul class="menu_bar_gnb">
+                                <li><a href="about.html"   >ABOUT</a></li>
+                                <li><a href="company.html" >COMPANY</a></li>
+                                <li><a href="csr.html"     >CSR</a></li>
+                                <li><a href="pr.html"      >PR</a></li>
+                            </ul>
+                            <div class="gnb_bottom">
+                                <ul class="sns_list">
+                                        <li class="list1"><a href="#"></a></li>
+                                        <li class="list2"><a href="#"></a></li>
+                                        <li class="list3"><a href="#"></a></li>
+                                </ul>
+                                <p>COPYRIGHT ⓒ 2019 COOD</p>                                
+                            </div>
+                        </div>                        
+                    </div>             
+                <div class="gnb">
+                    <ul>
+                        <li><a href="about.html"   >ABOUT</a></li>
+                        <li><a href="company.html" >COMPANY</a></li>
+                        <li><a href="csr.html"      class="choice">CSR</a></li>
+                        <li><a href="pr.html"      >PR</a></li>
+                    </ul>
+                </div>
+            <!--login-->
+            <div class="signin">
+                <a href="login.html" class="login"  target="_blank">Sign In</a>
+            </div>
+            <!--//login-->
+            
+            <!--sns-->
+                <nav class="sns">
+                    <a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-youtube-square"></i></a>
+                </nav>
+            <!--//sns--> 
+            </div>
+        </header>
+  
+<!--container-->
+        <section class="container">       
+                <div class="sub_visual">
+                    <h3 class="eng tracking-in-expand-fwd">CSR</h3> 
+                </div> 
+                <div class="with_cood">
+                    <div class="content">
+                        <h2 class="firstTitle">With Cood<br> 
+                        <span>The Mission of Cood 
+                        <span class="font_name">2019!</span></span>
+                        </h2>
+
+                    <div class="volunteer_work_wrap">
+                        <div class="volunteer_inner volunteer_top">
+                            <p class="img">
+                                <img src="img/volunteer1.png" alt="봉사하는 이미지">
+                            </p>
+                            <div class="text_wrap">
+                                <p class="innertitle"><span><img src="img/bar.png" alt=""></span><span class="text">1만 개의 도시락</span></p>
+                                <p class="text2">맛있는 식사가 필요한 소외 계층에게 사랑의 도시락을 전달합니다.<br>
+                                기부금 후원, 직접 배달 등 쿠드의 마음을 담은 도시락 1만개가<br>
+                                희망의 메시지와 함께 배달됩니다.</p>
+                            </div>
+                            
+                        </div>  
+                        <div class="volunteer_inner volunteer_bottom">
+                            <div class="text_wrap">
+                                <p class="innertitle"><span><img src="img/bar.png" alt=""></span><span class="text">1천 시간의 자원봉사 활동</span></p>
+                                <p class="text2">쿠드가 지역 사회와 이웃을 위해 나섭니다.<br>
+                                도움이 필요한 곳이라면 혼자든 함께든 달려가겠습니다.<br>
+                                2019년 한 해 동안 쿠드임직원들이 1천 시간 자원봉사 활동을 목표로<br>
+                                힘을 합칩니다.</p>
+                            </div>                           
+                            <p class="img">
+                                <img src="img/volunteer2.png" alt="봉사하는 이미지">
+                            </p>
+                        </div>                         
+                    </div>
+                    <div class="campain_li">
+                        <p class="title">행복얼라이언스와 함께 한＇도시락캠페인＇<br>
+                        <span>국내 최초 사회공헌 연합체 ‘행복얼라이언스’멤버사로 식사를 걱정하는 아이들에게 맛있는 행복을 전달했습니다.</span></p>
+                        <ul>
+                            <li><img src="img/csr_campain_img1.png" alt="캠페인이미지1"></li>
+                            <li><img src="img/csr_campain_img2.png" alt="캠페인이미지2"></li>
+                            <li><img src="img/csr_campain_img3.png" alt="캠페인이미지3"></li>
+                            <li><img src="img/csr_campain_img4.png" alt="캠페인이미지4"></li>
+                            <li><img src="img/csr_campain_img5.png" alt="캠페인이미지5"></li>
+                            <li><img src="img/csr_campain_img6.png" alt="캠페인이미지6"></li>
+                            <li><img src="img/csr_campain_img7.png" alt="캠페인이미지7"></li>
+                            <li><img src="img/csr_campain_img8.png" alt="캠페인이미지8"></li>
+                        </ul>
+                    </div>
+                     </div>
+
+                 
+             </div> 
+                    <div class="with_partner">
+                        <div class="content">
+                            <p class="title">With Client<br><span>고객과 함께 성장하는 쿠드의 상생 활동</span></p>
+                            <ul class="partner_li">
+                                <li>
+                                    <div class="top">
+                                        <p class="top_title">
+                                            <span><img src="img/text_bar1.png" alt></span>
+                                            <span class="text">쿠드 알뜰쇼핑</span>
+                                        </p>
+                                        <p class="text1">
+                                            쿠드가 할인 비용을 전적으로 부담해 배달서비스에<br>필요한 물품을 소매가보다 최대 약 50% 할인된 가격에<br>제공하는 쿠드 상생 프로그램 
+                                        </p>
+                                    </div>
+                                    <div class="bottom">
+                                        <p class="text2">알뜰쇼핑 이용건 수, 오픈 6개월만에 7.5배 증가</p>
+                                        <p class="text2">이용 고객님 대상 만족도 조사 결과 96%가 '만족’</p>
+                                        <p class="icon"><img src="img/shopping.png" alt="아이콘"></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top">
+                                        <p class="top_title">
+                                            <span><img src="img/text_bar1.png" alt></span>
+                                            <span class="text">독립운동사 대중화</span>
+                                        </p>
+                                        <p class="text1">
+                                            독립기념관과 함께 '독립운동사 대중화를 위한 업무협약'을 체결했습니다.<br>
+
+                                            이 협약에 따라, 홍보 플랫폼에 독립운동 역사 등을 알리게 되며,<br>
+
+                                            쿠드 안내게시판에 기존의 상품 정보 대신
+
+                                            국가보훈처가 선정한 2019 이달의 독립운동가 포스터를 매월 게시할 예정입니다.
+                                        </p>
+                                    </div>
+                                    <div class="bottomIcon">
+                                        <p class="icon"><img src="img/history.png" alt="아이콘"></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top">
+                                        <p class="top_title">
+                                            <span><img src="img/text_bar1.png" alt></span>
+                                            <span class="text">글로벌 자원봉사단</span>
+                                        </p>
+                                        <p class="text1">
+                                            글로벌 자원봉사단은 미술활동과 체육활동을 실시하고, 아이들을 위한 문화공연도 실시하며,<br>
+
+                                            또한 아픈 아이들이 쾌적한 환경에서 병원 치료를 받을 수 있도록<br>
+
+                                            병원 도색 작업과 함께 놀이터 보수작업도 실시할 예정입니다.
+                                        </p>
+                                    </div>
+                                    <div class="bottomIcon">
+                                        <p class="icon"><img src="img/help.png" alt="아이콘"></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top">
+                                        <p class="top_title">
+                                            <span><img src="img/text_bar1.png" alt></span>
+                                            <span class="text">행복 만들기 프로젝트</span>
+                                        </p>
+                                        <p class="text1">
+                                            이 프로젝트는 서울 지역 내 저소득 조손가족을 대상으로, <br>
+
+                                            조부모 75세 미만, 아동 7세 이상의 가족이 참가 신청을 할 수 있습니다.<br>
+
+                                            서울시에서 1차, 쿠드에서 최종 30명을 선정하고 참가자에게는 1년간 쿠드식품을 지원합니다.
+                                        </p>
+                                    </div>
+                                    <div class="bottomIcon">
+                                        <p class="icon"><img src="img/dream.png" alt="아이콘"></p>
+                                    </div>
+                                </li>                                                                                                
+                            </ul>
+                        </div>
+                    </div>                               
+        </section> 
+                                                      
+                                                                                         
+<!--footer -->
+        <footer>
+            <div class="footer_inner">
+                <h2 class="ftLogo"><a href="index.html"><img src="img/logo.png" alt="쿠드"></a></h2>
+                <ul class="address">
+                    <li><strong>(주)쿠드</strong></li>
+                    <li>서울특별시 서초구 서초동 1305</li>
+                    <li>Copyrightⓒ2019 COOD Korea All right reserved.</li>
+                </ul>
+                <ul class="ft_sns">
+                        <li><a href="#"><img src="img/sns_f.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="img/sns_i.png" alt="instagram"></a></li>
+                        <li><a href="#"><img src="img/sns_u.png" alt="youtube"></a></li>
+                </ul>
+            </div>
+        </footer>           
+    </div>             
+</body>
+</html>

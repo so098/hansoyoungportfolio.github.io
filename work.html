@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>work</title>
+    <link rel="stylesheet" href="css/work.css">
+    <script src="js/jquery.js"></script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />   
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <link href="css/scroll_basic.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />     
+    <script src="js/iscroll.js"></script>
+    <script type="text/javascript">
+      
+
+//<![CDATA[
+
+(function($, undefined){
+
+    $.fn.multiOpenMenu = function(options) {
+
+        // 메뉴가 될 엘리먼트가 없는지 체크합니다.
+
+        if(this.length === 0) {
+
+            return this;
+
+        }
+
+
+
+        // 기본값 설정 : active는 처음에 열려 있을 메뉴 입니다.
+
+        var settings = $.extend({
+
+            active: 4
+
+        }, options);
+
+
+
+        // 초기 메뉴를 생성합니다.
+
+        var headers = this.find(">h3");
+
+        $.each(headers, function(i, opt) {
+
+            if(i != settings.active) {
+
+                $(this).next().hide();
+
+            }
+
+        });
+
+
+
+        // 메뉴를 클릭했을때 서브 메뉴를 보여주는 이벤트를 만듭니다.
+
+        headers.on('click', function() {
+
+            var menuArea = $(this).next();
+
+            var isOpen = menuArea.is(":visible");
+
+
+
+            // 열린 상태에 따라 이벤트를 반전해서 발생시킨다.
+
+            menuArea[isOpen ? 'slideUp' : 'slideDown']().trigger(isOpen ? 'hide' : 'show');
+
+
+
+            // 이벤트 버블링을 멈춘다.
+
+            return false;
+
+        });
+
+
+
+        return this;
+
+    };
+
+}(jQuery));
+
+
+
+// 메뉴를 생성합니다.
+
+$(function(){
+
+    $("#menu").multiOpenMenu();
+
+});
+
+//]]>
+'use strict';
+    
+$('.animate').scrolla({
+    mobile: false, //모바일버전시 해제
+    once: false //스크롤시 딱 한번만 하고싶을땐 true
+});    
+    
+//고정헤더, 사이드바 이벤트
+var scrollTop = 0;
+scrollTop = $(document).scrollTop();
+fixHeader();
+sideBar();
+//윈도우창 조절시에 이벤트
+$(window).on('scroll resize', function() {
+    scrollTop = $(document).scrollTop();
+    fixHeader();
+    sideBar();
+});
+
+//고정헤더 함수
+function fixHeader() {
+    if (scrollTop > 200) { //스크롤탑이 200이상일때부터 헤더고정
+        $('header').addClass('on');
+    } else {
+        $('header').removeClass('on');
+    }
+}
+//사이드바 함수
+function sideBar() {
+    $('#aside').css({'top': (scrollTop + 150) + 'px'});
+}
+        
+    //가로스크롤
+	$(function (){
+		var barWidth = 0;
+        $('#iscroll-horizon').find('ul.slide li').each(function() {  //find()는 어떤특정요소의 하위요소를 찾을 때 사용
+            barWidth += $(this).outerWidth(true); //ul.slide li의 이미지들의 each(각각)의 outerWidth(width + padding + border값까지 더한 크기)를 측정하여  barWidth 에 저장
+        });
+        $('#iscroll-horizon').find('ul.slide').css({'width': barWidth + 'px'}); //ul.slide의 넓이를 barWidth 에 저장한 px값으로 지정해준다
+            var myScroll = new IScroll('#iscroll-horizon div.wrapper', { 
+                click: true, //마우스로 끌어서 스크롤할때 링크이동방지
+                scrollX: true, //가로스크롤로 지정
+                scrollY: false //가로스크롤로 지정
+        });		
+        //윈도우창이 리사이즈될때 이벤트
+        $(window).on('resize', function() { 
+            barWidth = 0;
+            $('#iscroll-horizon').find('ul.slide li').each(function() {
+                barWidth += $(this).outerWidth(true);
+            });
+            $('#iscroll-horizon').find('ul.slide').css({'width': barWidth + 'px'});
+            myScroll.refresh();
+        });		
+	}, 300);
+        
+//스크롤인디게이트
+        $('#iscroll-horizon').ready(function() {
+
+	var getMax = function() {
+		return $(document).width() - $(window).width();
+	}
+
+	var getValue = function() {
+		return $(window).scrolltop();
+	}
+
+	if ('max' in document.createElement('progress')) {
+		var progressBar = $('progress');
+		
+		progressBar.attr({
+			max: getMax()
+		});
+
+		$(document).on('scroll', function() {
+			progressBar.attr({
+				value: getValue()
+			});
+		});
+
+		$(window).resize(function() {
+			
+			progressBar.attr({
+				max: getMax(),
+				value: getValue()
+			});
+		});
+
+	} else {
+
+		var progressBar = $('.progress-bar'),
+			max = getMax(),
+			value, width;
+
+		var getWidth = function() {
+			
+			value = getValue();
+			width = (value / max) * 100;
+			width = width + '%';
+			return width;
+		}
+
+		var setWidth = function() {
+			progressBar.css({
+				width: getWidth()
+			});
+		}
+
+		$(document).on('scroll', setWidth);
+		$(window).on('resize', function() {
+			
+			max = getMax();
+			setWidth();
+		});
+	}
+});        
+</script>        
+</head>
+<body>
+    <div id="wrap">
+        <header>
+           
+            <div class="header">
+                    <div class="innerHeader trans">
+                       <div class="header_bg"></div>
+                        <h1 class="logo"><a href="index.html"><img class="change" src="img/logo_white.png" alt="로고"></a></h1>
+                        <div class="gnb">
+                           <div class="menu_bg"></div>
+                            <ul class="gnb_ul">
+                                <li> <a  data-menuanchor="firstPage"  class="menu_a " href="index.html" >HOME</a></li>
+                                <li ><a class="menu_a"  href="about.html" >ABOUT</a></li>
+                                <li ><a class="menu_a active"  href="work.html" >WORK</a></li>
+
+                            </ul>
+                        </div>                        
+                    </div>
+
+            </div>
+        </header>
+                <div class="main">
+                   <div class="mask"></div>
+                    <div class="title">
+                        <h1 class="text">What i do_</h1>
+                    </div>
+                </div>        
+        <section class="work">
+            <div class="content">
+                <div id="iscroll-horizon" class="portfolio relative no_wrap display_inline_top iscroll">
+                    
+<div class="wrapper">
+    <ul class="slide">
+                        <section class="web all">
+                                  <div class="title_work abs_1 vertical_writing">WEBDESIGN</div>
+                                   <li class="drag_item display_inline-top">
+                                    <div class="middle_tit">
+                                        <span class="md_tit_m color_white display_inline_bottom">Web</span>
+                                        <span class="md_tit_xxs relative display_inline_bottom">Responsive web, COOD</span>
+                                    </div>
+                                    <a href="cood.html"><div class="image relative">
+                                            <div class="image_on cood"></div>
+                                        </div></a>
+                                    <div class="subHeader">PB 전문 푸드기업<br>반응형 홈페이지</div>
+                                                              </li>
+                                                              
+                                  <li class="drag_item display_inline-top down">
+                                    <div class="middle_tit">
+                                        <span class="md_tit_m color_white display_inline_bottom">Web</span>
+                                        <span class="md_tit_xxs relative display_inline_bottom">Responsive web, MOLDIVES</span>
+                                    </div>
+                                    <a href="maldive.html"> <div class="image relative">
+                                       <div class="image_on moldives"></div>
+                                    </div></a>
+                                    <div class="subHeader">휴양지 호텔<br>반응형 홈페이지</div>
+                                  </li> 
+                                                              <li class="drag_item display_inline-top">
+                                    <div class="middle_tit">
+                                        <span class="md_tit_m color_white display_inline_bottom">Web</span>
+                                        <span class="md_tit_xxs relative display_inline_bottom">Responsive web, MOLDIVES</span>
+                                    </div>
+                                    <a href="hanwha.html"> <div class="image relative">
+                                       <div class="image_on hanwha"></div>
+                                    </div></a>
+                                    <div class="subHeader">석유 화학 기업<br>반응형 홈페이지</div>
+                                                              </li>
+                              </section>   
+                            <section class="illu all">
+                                  <div class="title_work abs_1 vertical_writing Sequence_2">ILLUSTRATION</div>                            
+                                  <li class="drag_item display_inline-top">
+                                        <div class="middle_tit">
+                                            <span class="md_tit_m color_white display_inline_bottom">Web</span>
+                                            <span class="md_tit_xxs relative display_inline_bottom">Responsive web, MOLDIVES</span>
+                                        </div>
+                                        <a href="lonely.html"> <div class="image relative">
+                                           <div class="image_on lonely"></div>
+                                        </div></a>
+                <div class="subHeader">방, 책상, 스탠드를<br> 이용한 일러스트</div>
+                                  </li>
+                              </section> 
+                            <section class="logo all">
+                                  <div class="title_work abs_1 vertical_writing Sequence_2">LOGO</div>                            
+                                  <li class="drag_item display_inline-top">
+                                        <div class="middle_tit">
+                                            <span class="md_tit_m color_white display_inline_bottom">Web</span>
+                                            <span class="md_tit_xxs relative display_inline_bottom">Responsive web, MOLDIVES</span>
+                                        </div>
+                                        <a href="mara.html"> <div class="image relative">
+                                           <div class="image_on mara"></div>
+                                        </div></a>
+                <div class="subHeader">마라탕 전문<br> 식품기업</div>
+                                  </li>
+                              </section>    
+                            <section class="detail all">
+                                  <div class="title_work abs_1 vertical_writing Sequence_2">DETAILPAGE</div>                            
+                                  <li class="drag_item display_inline-top">
+                                        <div class="middle_tit">
+                                            <span class="md_tit_m color_white display_inline_bottom">Web</span>
+                                            <span class="md_tit_xxs relative display_inline_bottom">Responsive web, MOLDIVES</span>
+                                        </div>
+                                        <a href="coolingstand.html"> <div class="image relative">
+                                           <div class="image_on cooling_stand"></div>
+                                        </div></a>
+                <div class="subHeader">쿨링 스탠드<br> 제작 기업</div>
+                                  </li>
+                              </section>                           <section class="blanck all">
+                                                              
+                                  <li class="drag_item display_inline-top">
+                                       
+                                  </li>
+                              </section>                                                                                                                                                                                                                                                                   
+                                                                                    
+                            </ul>
+</div>                   
+                </div>
+<!--
+                    <aside>
+                        <div class="carousel_nav">
+                            <div class="carousel_nav_indicator"></div>
+                            <span class="carousel_nav_dot loc">W<span class="op_0">Web</span></span>
+                            <span class="carousel_nav_dot">I<span class="op_0">Illustration</span></span>
+                            <span class="carousel_nav_dot">L<span class="op_0">Logo</span></span>
+                            <span class="carousel_nav_dot">D<span class="op_0">Detailpage</span></span>
+                        </div>
+                        <progress value="0" max="1">
+            
+            <div class="progress-container">
+                <span class="progress-bar"></span>    
+            </div>
+        </progress>
+                    </aside>
+-->
+                               
+            </div>
+        </section>
+
+        <footer>
+			<div class="footer_inner">
+				<ul class="ft_gnb">
+					<li><a class="no_md_line" href="index.html"><span class="line_wrap"><span class="line_md"></span>HOME</span></a></li>
+					<li><a class="no_md_line" href="about.html"><span class="line_wrap"><span class="line_md"></span>ABOUT</span></a></li>
+					<li><a class="md_line" href="work.html">WORK</a></li>
+
+
+				</ul>
+				<div class="line"></div>
+				<div class="ft_bottom">
+					<h2 class="ftlogo ft"><a href="index.html"><img src="img/logo_black.png" alt=""></a></h2>
+					<ul class="ftinfo ft">
+						<li>한소영<span>HANSOYOUNG</span></li>
+						<li>WEB PUBLISHER</li>
+						<li>010-5385-4427</li>
+					</ul>
+					<p class="sub_logo ft"><img src="img/sub_logo.png" alt="서브로고"></p>
+				</div>
+
+			</div>
+		</footer>                          
+    </div>
+</body>
+</html>

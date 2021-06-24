@@ -1,0 +1,870 @@
+@charset "utf-8";
+@import url(font-awesome.min.css);
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+/*reset*/
+*{margin: 0;padding: 0;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0; font-weight: 700;text-decoration: inherit;}
+img{vertical-align:middle;}
+li{list-style: none;}
+a{border:none;color: inherit;text-decoration: inherit;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+img{vertical-align: middle;}
+a{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    text-decoration: none;
+    vertical-align: baseline;
+    color: #666;
+    background: transparent;
+    cursor: pointer;
+}
+/*layout*/
+body{
+    font-size: 14px;
+    font-family: 'NanumSquare', sans-serif;
+}
+.wrap{
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.content{
+    width:1200px;
+    height:100%;
+    margin: 0 auto;
+}
+header{
+    position: fixed;
+    width:100%;
+    height: 100px;
+    line-height: 100px;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+    top: 0;
+    left: 0;
+    font-family: 'Nanum Gothic',sans-serif;
+    
+}
+
+
+
+
+header .innerHeader{
+    width:1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+
+}
+header .innerHeader .logo{
+    float: left;
+    margin-right: 150px;
+    cursor: pointer;
+
+}
+
+header .innerHeader .logo img{
+    width:30%;
+}
+header .innerHeader .gnb{
+    float: left;
+    color:#fff;
+
+}
+
+header .innerHeader .gnb li {
+    float: left;
+    margin-right: 80px;
+
+    
+}
+header .innerHeader .gnb li a{color: #fff;     transition: all .5s;}
+header .innerHeader .gnb li:last-child{
+    margin-right: 0;
+}
+header .innerHeader .gnb li a:hover{
+    color: #f8c903;
+}
+/*login*/
+.signin{
+    position: absolute;
+    top:0px;
+    right:180px;
+    
+    
+}
+.signin .login{
+    padding: 5px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: #f8c903;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    letter-spacing: 1px;
+    transition: all .5s;
+}
+/*sns*/
+
+.sns{
+    float: right;
+}
+.sns a{
+    display: inline-block;
+    padding: 5px;
+    color: #fff;
+    font-size: 25px;
+    opacity: 0.7;
+    transition: all .3s;
+}
+.sns a:hover{
+    opacity: 0.9;
+    transform: translateY(-10px) scale(1.2);
+}
+.header .innerHeader .menu_bar #name{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999999999999999999999999999999999;
+    color: #000;
+}
+#name .gnb_top{
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 37px 25px 15px 14px;
+    border-bottom: 1px solid #d9d9d9;
+    width: calc(100% - 30px);
+    margin: auto;
+    height: 100px;    
+    position: relative;
+}
+#name .gnb_top h1{
+    float: left;
+    width: 69px;
+    height: 37px;    
+}
+#name .gnb_top h1 a{
+    display: block;
+    width: 130%;
+    height:90%;
+    background: url(../img/logo.png) no-repeat;
+    background-size: 100% 100%;    
+}
+#name .gnb_top .top_sign{
+    position: absolute;
+    top: 6px;
+    right: 95px;
+    padding:0 30px 0 35px;
+    width: 42px;
+    overflow: hidden;
+    border-left: 1px solid #d9d9d9;    
+    border-right: 1px solid #d9d9d9;
+}
+#name .gnb_top .top_sign a{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+#name .gnb_top .top_sign a img{
+    width: 100%;
+}
+#name .gnb_top .b-close{
+    float: right;
+    width: 35px;
+    height: 35px;
+    z-index: 1000;    
+}
+#name .gnb_top .b-close a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/gnb_menu_close.png) no-repeat;
+    background-size: 100% 100%;    
+}
+
+#name .menu_bar_gnb{
+    padding: 41px 45px 0;    
+}
+#name .menu_bar_gnb li{  
+
+}
+
+#name .menu_bar_gnb li a{
+font-family: 'CorpidC1s-Regular';
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 0.04rem;
+    display: block;
+    cursor: pointer;    
+    
+}
+#name .menu_bar_gnb li a:hover{
+    color: #d20000;
+}
+#name .gnb_bottom{
+    overflow: hidden;
+    padding: 20px 30px 30px 30px;
+    border-top: 1px solid #d9d9d9;
+    width: calc(100% - 30px);
+    margin: 100px auto 0;    
+}
+#name .gnb_bottom .sns_list{
+    overflow: hidden;
+}
+#name .gnb_bottom .sns_list li{
+    float: left;
+    height: 23px;
+    margin-right: 27px;    
+}
+#name .gnb_bottom .sns_list li.list1{
+    width: 12px;
+    background: url(../img/gnb_sns1.png) no-repeat;
+    background-size: 100% 100%;    
+}
+#name .gnb_bottom .sns_list li.list2{
+width: 22px;
+    background: url(../img/gnb_sns2.png) no-repeat;
+    background-size: 100% 100%;    
+}
+#name .gnb_bottom .sns_list li.list3{
+width: 24px;
+    background: url(../img/gnb_sns3.png) no-repeat;
+    background-size: 100% 100%;    
+}
+#name .gnb_bottom .sns_list li.list4{
+    width: 21px;
+    background: url(../img/gnb_sns4.png) no-repeat;
+    background-size: 100% 100%;    
+}
+#name .gnb_bottom .sns_list li a{
+    display: block;
+    width: 100%;
+    height: 100%;    
+}
+#name .gnb_bottom p{
+    margin-top: -20px;
+    font-size: 15px;    
+}
+
+
+/*sns*/
+
+.sns{
+    float: right;
+}
+.sns a{
+    display: inline-block;
+    padding: 5px;
+    color: #fff;
+    font-size: 25px;
+    opacity: 0.7;
+    transition: all .3s;
+}
+.sns a:hover{
+    opacity: 0.9;
+    transform: translateY(-10px) scale(1.2);
+}
+
+/*name*/
+#name{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 120%;
+    background: #fff;
+    z-index: 9999999999999999999999999999999999;
+    color: #000;
+}
+#name .gnb_top{
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 37px 25px 15px 14px;
+    border-bottom: 1px solid #d9d9d9;
+    width: calc(100% - 30px);
+    margin: auto;
+    height: 100px;    
+    position: relative;
+}
+#name .gnb_top h1{
+    float: left;
+    width: 69px;
+    height: 37px;    
+}
+#name .gnb_top h1 a{
+    display: block;
+    width: 130%;
+    height:90%;
+    background: url(../img/logo.png) no-repeat;
+    background-size: 100% 100%;    
+}
+#name .gnb_top .top_sign{
+    position: absolute;
+    top: 6px;
+    right: 95px;
+    padding:0 30px 0 35px;
+    width: 42px;
+    overflow: hidden;
+    border-left: 1px solid #d9d9d9;    
+    border-right: 1px solid #d9d9d9;
+}
+#name .gnb_top .top_sign a{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+#name .gnb_top .top_sign a img{
+    width: 100%;
+}
+#name .gnb_top .b-close{
+    float: right;
+    width: 35px;
+    height: 35px;
+    z-index: 1000;    
+}
+#name .gnb_top .b-close a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/gnb_menu_close.png) no-repeat;
+    background-size: 100% 100%;    
+}
+
+#name .menu_bar_gnb{
+    padding: 41px 45px 0;    
+}
+#name .menu_bar_gnb li{  
+
+}
+
+#name .menu_bar_gnb li a{
+font-family: 'CorpidC1s-Regular';
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 0.04rem;
+    display: block;
+    cursor: pointer;    
+    
+}
+#name .menu_bar_gnb li a:hover{
+    color: #d20000;
+}
+#name .gnb_bottom{
+    overflow: hidden;
+    padding: 20px 30px 30px 30px;
+    border-top: 1px solid #d9d9d9;
+    width: calc(100% - 30px);
+    margin: 100px auto 0;    
+}
+#name .gnb_bottom .sns_list{
+    overflow: hidden;
+}
+#name .gnb_bottom .sns_list li{
+    float: left;
+    height: 23px;
+    margin-right: 27px;    
+}
+#name .gnb_bottom .sns_list li.list1{
+    width: 12px;
+    background: url(../img/gnb_sns1.png) no-repeat;
+    background-size: 100% 100%;    
+}
+#name .gnb_bottom .sns_list li.list2{
+width: 22px;
+    background: url(../img/gnb_sns2.png) no-repeat;
+    background-size: 100% 100%;    
+}
+#name .gnb_bottom .sns_list li.list3{
+width: 24px;
+    background: url(../img/gnb_sns3.png) no-repeat;
+    background-size: 100% 100%;    
+}
+#name .gnb_bottom .sns_list li.list4{
+    width: 21px;
+    background: url(../img/gnb_sns4.png) no-repeat;
+    background-size: 100% 100%;    
+}
+#name .gnb_bottom .sns_list li a{
+    display: block;
+    width: 100%;
+    height: 100%;    
+}
+#name .gnb_bottom p{
+    margin-top: -20px;
+    font-size: 15px;    
+}
+
+/*//header*/
+/*sub_visual*/
+.container{
+    height: 100%;
+}
+.container .sub_visual_back{
+    background: #000;
+}
+.container .sub_visual{
+    background: url(../img/2.PNG)no-repeat top center/cover;
+    background-attachment: fixed;
+    width:100%;
+    height: 450px;
+}
+
+.container .sub_visual .eng{
+    text-align: center;
+    letter-spacing: 1rem;
+    color: #494949;
+    font-size: 55px;
+    padding-top: 245px;
+    font-weight: 700;
+}
+.tracking-in-expand-fwd {
+	-webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+/*로그인container*/
+
+.login_bg_wrap{
+    width: 100%;
+    height: 707px;
+    background: url(../img/loginbg.png)no-repeat center/cover;
+    background-attachment: fixed;
+}
+
+.find_mem_wrap{
+    max-width: 570px;
+    margin: 0 auto;
+    padding: 70px 0 50px;
+}
+
+
+.find_mem_inner{
+    
+}
+form{display: block;}
+fieldset{display: block;}
+.hid{
+    position: absolute;
+    left: -9999px;
+    font-size: 0;
+    width: 0;
+    height: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+.new_login_tt1{
+    color: #fff;
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.join{
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+    max-width: 570px;
+    margin: 0 auto 30px;
+    position: relative;
+}
+.find_form_txt{
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    color: #777;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    padding: 30px 20px 30px;
+}
+
+.find_form_txt .t1{
+    color: #d30000 !important;
+}
+.for_mob{display: none !important;}
+.input_box{
+    border: 0 !important;
+    padding: 20px 20px;
+    position: relative;
+    background: #fff;
+}
+input_box:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.input_box input{
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 530px;
+    padding: 15px;
+    width: 100%;
+}
+.limit_txt{
+    color: #444;
+    display: none;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+.checkWrap{
+    display: block;
+    margin-bottom: 20px;
+}
+
+#idRemb{
+    display:none;
+}
+.checkWrap .idRembBox{
+    font-size: 20px;
+    color: #666;
+    line-height: 1.4;
+    cursor: pointer;
+    
+}
+.checkWrap .idRembBox:before{
+    content:url(../img/mem_check_off.png);
+    display: block;
+    float: left;
+    margin-left: 0;
+    margin-right: 10px;    
+}
+#idRemb:checked~ .idRembBox:before{
+    content:url(../img/mem_check_off2.png);
+    display: block;
+}
+.btn_mem_login{
+    margin: 0;
+    background: #d20000;
+    border-radius: 3px;
+    text-align: center;
+    max-width: 570px;
+}
+.btn_mem_login a{
+    color: #fff;
+    font-size: 24px;
+    display: block;
+    line-height: 65px;
+}
+.input_warn_text{
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 15px;    
+}
+
+.login_btn_wrap{
+    background: #fff;
+    box-sizing: border-box;
+    max-width: 570px;
+}
+.login_btn_wrap ul{
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+.login_btn_wrap ul li{
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    vertical-align: top;
+    width: 33.3%;    
+}
+.login_btn_wrap ul li a{
+    color: #666;
+    display: block;
+    font-size: 16px;
+    height: 100%;
+    line-height: 54px;
+    width: 100%;
+}
+.login_btn_wrap ul li:after{
+    border-right: 1px solid #ddd;
+    color: #666;
+    content: "";
+    height: 22px;
+    margin-top: -11px;
+    position: absolute;
+    right: -1px;
+    top: 50%;    
+}
+.login_btn_wrap ul li.last{
+    float: right;
+}
+
+.mb10{margin-bottom: 10px;}
+
+
+
+/*footer*/
+footer{
+    height: 130px;
+    clear: both;
+    background: #1a1a1a;
+    padding-bottom: 25px;
+    position: relative;
+}
+footer .footer_inner{
+    position: relative;
+    width:1200px;
+    margin: auto;
+    padding: 50px;
+}
+footer .footer_inner .ftLogo{
+    width:130px;
+    overflow: hidden;
+    float: left;
+    line-height: 3;
+}
+footer .footer_inner .ftLogo img{
+    width:100%;
+}
+
+footer .footer_inner .address{
+    color: #fff;
+    margin-left: 100px;
+    float: left;
+}
+footer .footer_inner .address li{
+    margin-bottom: 8px;
+}
+
+footer .footer_inner .ft_sns{
+    float: right;
+}
+
+footer .footer_inner .ft_sns li{
+    float: left;
+    margin-right: 10px;
+    line-height: 4;
+}
+
+
+
+
+
+
+/*1024*/
+@media screen and (max-width:1024px){
+.content{width: 900px;}
+    header{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+    top: 0;
+    left: 0;
+    font-family: 'Nanum Gothic',sans-serif; 
+    }
+
+    header .innerHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    }
+    header .innerHeader .logo{
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    width: 300px;
+    height:300px;
+    }
+    header .innerHeader .menu_bar{
+    position: absolute;
+    right: 40px;
+    top: 35px;
+    width: 35px;
+    height: 35px;    
+    }
+    header .innerHeader .menu_bar #burger{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/gnb_menu_off.png) no-repeat;
+    background-size: 100% 100%;    
+    }
+    .gnb,.signin{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+    display: none;        
+    }
+    .sns a i{display: none;}
+    .main{height: 900px;}  
+    .main .title{left: 31%;}
+
+
+/*join*/
+
+
+/*footer*/
+    footer{width: 100%;height: 200px;}
+    footer .footer_inner{width: 900px;padding: 0px; padding-top: 10px;}   
+    footer .footer_inner .ftLogo{width: 70px;float: none;margin: 0 auto;}
+    footer .footer_inner .address{float: none;margin: 0 auto;text-align: center;font-size: 12px;}
+    footer .footer_inner .ft_sns{float: none;margin: 0 auto;display: block;border-top: 1px solid #7c7c7c;margin-top: 20px; width: 400px;padding-left:300px;overflow: hidden;
+    }
+}
+
+
+
+
+/*414*/
+@media screen and (max-width:414px) {
+.content{width: 380px;}
+    .container .sub_visual .eng{font-size: 30px;}
+    header{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+    top: 0;
+    left: 0;
+    font-family: 'Nanum Gothic',sans-serif; 
+    }
+
+    header .innerHeader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    }
+    header .innerHeader .logo{
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    width: 300px;
+    height:300px;
+    }
+    header .innerHeader .menu_bar{
+    position: absolute;
+    right: 40px;
+    top: 35px;
+    width: 35px;
+    height: 35px;    
+    }
+    header .innerHeader .menu_bar #burger{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/gnb_menu_off.png) no-repeat;
+    background-size: 100% 100%;    
+    }
+    .gnb,.signin{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+    display: none;        
+    }
+    .sns a i{display: none;}
+    .main{height: 900px;}  
+    .main .title{left: 31%;}  
+
+    .new_login_tt1{font-size: 20px;}
+    .login_bg_wrap{height: 600px;}
+    .join{max-width: 380px;}
+    .input_box input{padding: 10px;font-size: 12px;}
+    .checkWrap .idRembBox{font-size: 15px;line-height: 1.7;}
+    .btn_mem_login{max-width: 400px;max-height: 50px;}
+    .btn_mem_login a{font-size: 18px;line-height: 52px;}
+    .input_warn_text{font-size: 12px;}
+    .login_btn_wrap ul li a{font-size: 12px;}
+/*footer*/
+    footer{width: 100%;height: 200px;}
+    footer .footer_inner{width: 414px;padding: 0px; padding-top: 10px;}
+    footer .footer_inner .ftLogo{width: 70px;float: none;margin: 0 auto;}
+    footer .footer_inner .address{float: none;margin: 0 auto;text-align: center;font-size: 12px;}
+    footer .footer_inner .ft_sns{float: none;margin: 0 auto;display: block;padding-left: 50px;border-top: 1px solid #7c7c7c;margin-top: 20px; width: 150px;}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

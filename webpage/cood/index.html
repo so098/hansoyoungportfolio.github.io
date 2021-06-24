@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />	
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cood</title>  
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"  charset="euc-kr"></script>
+    
+<script  charset="euc-kr">
+      function fnMove(seq){
+        var offset = $("#div" + seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 400);
+    }
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+        function showHide(id) {
+
+            var obj = document.getElementById(id);
+
+            if (obj.style.display == 'none')
+
+                obj.style.display = 'block';
+
+            else
+
+                obj.style.display = 'none';
+
+        }
+
+
+</script>    
+</head>
+
+<body>
+    <div class="wrap" id="div1">
+        <header>
+            <div class="header">
+                <div class="innerHeader">
+                    <h1 class="logo"><a href="index.html"><img src="img/logo_fff.png" alt="하얀색로고"></a></h1>
+                    <div class="menu_bar">
+                        <a id="burger" onclick="showHide('name')" onfocus="this.blur()"></a>
+                        <div id=name style="display:none">
+                           <div class="gnb_top">
+                               <h1><a href="index.html"></a></h1>
+                               <p class="top_sign"><a href="login.html"  target="_blank"><img src="img/user.png" alt="로그인"></a></p>
+                               <div class="b-close">
+                                   <a onclick="showHide('name')" onfocus="this.blur()"></a>
+                               </div>
+                           </div>
+                            <ul class="menu_bar_gnb">
+                                <li><a href="about.html" target="_blank">ABOUT</a></li>
+                                <li><a href="company.html" target="_blank">COMPANY</a></li>
+                                <li><a href="csr.html" target="_blank">CSR</a></li>
+                                <li><a href="pr.html" target="_blank">PR</a></li>
+                            </ul>
+                            <div class="gnb_bottom">
+                                <ul class="sns_list">
+                                        <li class="list1"><a href="#"></a></li>
+                                        <li class="list2"><a href="#"></a></li>
+                                        <li class="list3"><a href="#"></a></li>
+                                </ul>
+                                <p>COPYRIGHT ⓒ 2019 COOD</p>                                
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="gnb">
+                        <ul>
+                            <li><a href="about.html" target="_blank">ABOUT</a></li>
+                            <li><a href="company.html" target="_blank">COMPANY</a></li>
+                            <li><a href="csr.html" target="_blank">CSR</a></li>
+                            <li><a href="pr.html" target="_blank">PR</a></li>
+                        </ul>
+                    </div>
+                <!--login-->
+                <div class="signin">
+                    <a href="login.html" class="login"  target="_blank">Sign In</a>
+                </div>
+                <!--//login-->
+                
+                <!--sns-->
+                    <nav class="sns" id="sns_wrap">
+                        <a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-youtube-square"></i></a>
+                    </nav>
+                <!--//sns--> 
+                </div>
+            </div>
+        </header>            
+        <div class="main kenburns-bottom">
+                <div class="title">
+                    <div class="main_text tracking-in-expand-fwd">
+                    <p>
+                    맛있는 <span class="red">하루</span><br>맛있는 <span class="yellow">한끼</span>
+                     </p>
+                     </div>
+                     
+                    <div class="search">
+                        <input type="text" placeholder="검색어를 입력하세요">
+                        <button><img src="img/magnifying-glass.png" alt="검색"></button>
+                    </div>
+                </div>
+                <div id="ScrollDown" class="demo">
+                  <a href="#model" onclick="fnMove('2')"><span></span>Scroll</a>
+                </div>
+        </div>
+
+        <section class="model" id="div2">
+            <div class="content">
+                <div class="modelLeft">
+                    <p><span class="bar">SERVICE</span></p>
+                    <p><img src="img/logo_2.png" alt="모델_로고"></p>
+                    <h2>쿠드</h2>
+                    <p>맛있는 하루, 맛있는 한끼</p>
+                    <p>쿠드 전속모델 <br>'윤아'</p>
+                </div>
+                <div class="modelRight">
+                    <p><img src="img/bf39eb0311da45a811cdd9f57c16203e.png" alt="쿠드모델"></p>
+                </div>
+            </div>
+        </section>
+        <section class="newMenu">
+               <div class="content">
+                      <div class="newMenu_left">
+                          <p><img src="img/agag.png" alt="메뉴배너"></p>
+                      </div>
+                    
+                    
+                    <div class="newMenu_right">
+                        <div class="newMenu_news">
+                            <p class="newsHeader">쿠드 NEWS <span><img src="img/newspaper.png" alt="뉴스아이콘"></span></p>
+                            <ul>
+                                <li><a href="pr.html">[포토] 새로운 소울푸드 한식 드디어 찾았다…</a></li>
+                                <li><a href="pr.html">[단독] 공정위 쿠드 심사 9개 적합…</a></li>
+                                <li><a href="pr.html">문화식품관광부, 쿠드 중국 국내 진출 검토한다…</a></li>
+                                <li><a href="pr.html">[포토] 쿠드 외 기업 품질 부적합 폐기까지…</a></li>
+                                <li><a href="pr.html">[리뷰] “20대 식품조리 선호 1위 쿠드라고 밝혀져”…</a></li>
+                            </ul>
+                        </div>
+                        <p class="newMenu_sale_img"><a href="#"><img src="img/50percent.png" alt="세일광고이미지"></a> </p> 
+                    </div>
+                </div>
+        </section>
+        <section class="brand">
+                <input type="radio" name="pos" id="pos1" checked>
+                <input type="radio" name="pos" id="pos2">
+                <input type="radio" name="pos" id="pos3">    
+
+            <ul>
+      <li>
+                <div class="content">
+                    <p><span class="bar">BRAND PROMISE</span></p>
+                    <h2>내 가족이 먹는다는 마음으로,<br>정성스런 한끼를 준비합니다.</h2>
+                    <span class="brandMobile"><p>배는 고픈데 많은 준비시간이 걱정되시죠. 하지만 매일 인스턴트음식으로 하루하루를 버틸 순 없는것 같습니다.</p>
+                        <p>그래서 생각했습니다. ‘어떻게 하면 편리하게, 든든하게 하루를 보낼 수 있을까?’</p>
+                        <p>고생한 당신의 하루가 더 든든해지길, 내 가족이 하루를 행복하게 보내길 바라는 마음으로 만들었습니다.</p>
+                        <p>번거롭지 않고 건강하고 속이 편한 음식을 드셨으면 좋겠는 당신께,</p>
+                        <p>맛있는 하루, 맛있는 한끼 쿠드를 대접합니다.
+                        </p></span>
+                </div>         
+      </li>
+      <li>
+                <div class="content">
+                    <p><span class="bar">BRAND PROMISE</span></p>
+                    <h2>고객의 목소리를 귀 기울여 듣고,<br>서비스를 개선하겠습니다.</h2>
+                    <span class="brandMobile"><p>고객의 목소리를 더욱 귀 기울이기 위해서 <br>
+                        Ai쿠크의 활용도를 더욱 높이고 있습니다.<br>
+                        고객님이 원하시는 사항이나 추가하고 싶은 메뉴의 내용을<br>
+                        언제 어디서나 들을 수 있도록 무엇이든 쿠크에게 말해주세요
+                        </p></span>
+                </div>           
+      </li>
+      <li>
+                <div class="content">
+                    <p><span class="bar">BRAND PROMISE</span></p>
+                    <h2>더욱 간편하게 집에서 조리하여 드실 수 있는<br>서비스를 기획합니다.</h2>
+                    <span class="brandMobile"><p>보관을 더 길게, 배송을 더 빠르게 하기 위해<br>
+                        쿠드임직원들은 항상 고민하고 있습니다.<br>
+                        쿠드의 냉장보관일은 최대 30일로 바쁜 당신의 일상이 위로 받을 수 있도록<br>
+                        보관일 최대 90일의 기간 상품을 판매하고 있습니다.<br>
+                        또한 배송은 다음날 새벽에 확인 하실 수 있으니
+                        쿠드의 서비스를 항상 지켜봐주세요
+                        </p></span>
+                </div>           
+      </li>
+    </ul>
+<div class="content">
+
+                    <p class="bullet">
+                      <label for="pos1">1</label>
+                      <label for="pos2">2</label>
+                      <label for="pos3">3</label>
+                    </p>
+            </div>
+    </section>  
+        <section class="hotdill">
+            <div class="content">
+                <div class="hotdill_left">
+                    <h2>바로 지금!</h2>
+                    <h3>인기 TOP10 핫딜</h3>
+                    <p>파격적인 가격으로 쿠드를 경험하세요</p>
+                    <p>
+                        <img src="img/positive-vote.png" alt="핫딜아이콘">
+                    </p>
+                </div>
+                <div class="hotdill_right">
+                   <div class="arrow arrow_top"><a href="#"><img src="img/arrow_top.png" alt="위쪽화살표"></a></div>
+                    <ul>
+                        <a href="#"><li>
+                                <p class="hotdill_img"><img src="img/20191007164817847.jpg" alt="갈치조림"></p>
+                                <ul>
+                                    <li class="hotdill_notice">BEST</li>
+                                    <li>매콤 갈치조림</li>
+                                    <li><strong>핫딜</strong> | 3,500원 / 2인분</li>
+                                </ul>
+                                <p class="cart"><img src="img/full-shoping-cart.png" alt="카트이미지"></p>                                
+                            </li></a>
+                        <a href="#"><li>
+                                <p class="hotdill_img"><img src="img/20190926194105990.jpg" alt="소고기두부전골"></p>
+                                <ul>
+                                    <li class="hotdill_notice">NEW</li>
+                                    <li>소고기두부전골</li>
+                                    <li><strong>핫딜</strong> | 10,190원 / 2인분</li>
+                                </ul>
+                                <p class="cart"><img src="img/full-shoping-cart.png" alt="카트이미지"></p>                                
+                            </li></a>
+                        <a href="#" class="linenone"><li >
+                                <p class="hotdill_img"><img src="img/20190911092538855.jpg" alt="부채살 찹스테이크"></p>
+                                <ul>
+                                    <li class="hotdill_notice">NEW</li>
+                                    <li>부채살 찹스테이크</li>
+                                    <li><strong>핫딜</strong> | 20,700원 / 2인분</li>
+                                </ul>
+                                <p class="cart"><img src="img/full-shoping-cart.png" alt="카트이미지"></p>
+                            </li> </a>                                       
+                    </ul>
+                   <div class="arrow arrow_bottom"><a href="#"><img src="img/arrow_bottom.png" alt="위쪽화살표"></a></div>                    
+                </div>
+            </div>
+        </section>
+        <section class="cookeu">
+            <div class="content">
+                <div class="title">
+                    <span class="line"></span>
+                    <h2>오직 당신에게만 추천하는 음식</h2>
+                    <p>쿠크, 오늘 저녁 뭐먹지?</p>
+                    <p class="ai"><span class="donutSpinner"></span>Ai쿠크입니다. 데이터 로딩중입니다...</p>
+                </div>
+                       <ul>
+                        <li>
+                            <a href="#">
+                                <p class="img"><img src="img/hoverimg1.png" alt="갈치조림"></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="img"><img src="img/hoverimg2.png" alt="갈치조림"></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p class="img"><img src="img/hoverimg3.png" alt="갈치조림"></p>
+                            </a>
+                        </li>                                      
+                                       </ul>
+            </div>
+        </section>
+        <section class="view">
+            <div class="content">
+                <ul>
+                    <li>
+                        <p><span class="bar">CAREER</span></p>
+                        <h3>채용 정보</h3>
+                        <p class="line career"><span class="career_span">[신입]</span> <br>신입 웹디자이너를 <br>채용합니다.</p>
+                        <p class="line career_mobile"><span class="career_span">[신입]</span> 신입 웹디자이너를 채용합니다.</p>
+                        
+                        <p class="career"><span class="career_span">[경력]</span> <br>대리급 개발자를 <br>채용합니다.</p>
+                        <p class="line career_mobile"><span class="career_span">[경력]</span> 대리급 개발자를 채용합니다.</p>
+                        
+                        <a href="company.html">view&#187;</a>
+                    </li>
+                    <li>
+                        <p><span class="bar">EVENT</span></p>
+                        <p class="event_img"><img src="img/home_banner1.png" alt="이벤트이미지"></p>
+                        <p class="event_img_mobile"><img src="img/home_banner1_mobile.png" alt="이벤트이미지"></p>
+                        <a href="pr.html">view&#187;</a>
+                    </li>
+                     <li>
+                        <p><span class="bar">NOTICE</span></p>
+                        <p class="event_img"><img src="img/home_banner2.png" alt="공지이미지"></p>
+                        <p class="event_img_mobile"><img src="img/home_banner2_mobile.png" alt="이벤트이미지"></p>
+                        <a href="pr.html">view&#187;</a>
+                    </li>                           
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <div class="footer_inner">
+               <div class="top">
+                  <button onclick="fnMove('1')"><p>&#94;<br><strong>TOP</strong></p></button>
+                   <a href="index.html" class="scroll">
+                        <p>&#94;<br><strong>TOP</strong></p>
+                   </a>
+               </div>
+                <h2 class="ftLogo"><a href="index.html"><img src="img/logo.png" alt="쿠드"></a></h2>
+                <ul class="address">
+                    <li><strong>(주)쿠드</strong></li>
+                    <li>서울특별시 서초구 서초동 1305</li>
+                    <li>Copyrightⓒ2019 COOD Korea All right reserved.</li>
+                </ul>
+                <ul class="ft_sns">
+                        <li><a href="#"><img src="img/sns_f.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="img/sns_i.png" alt="instagram"></a></li>
+                        <li><a href="#"><img src="img/sns_u.png" alt="youtube"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

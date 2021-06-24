@@ -1,0 +1,5 @@
+video/all_1.mp4 filter=lfs diff=lfs merge=lfs -text
+video/all_2.mp4 filter=lfs diff=lfs merge=lfs -text
+video/all_3.mp4 filter=lfs diff=lfs merge=lfs -text
+video/all_4.mp4 filter=lfs diff=lfs merge=lfs -text
+webpage/cood/디자인구성요소응용-한소영.pptx filter=lfs diff=lfs merge=lfs -text

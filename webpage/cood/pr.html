@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>PR</title>
+    <link rel="stylesheet" href="css/pr.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />   
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />    
+</head>
+<script>
+    function fnMove(seq){
+        var offset = $("#div" + seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 400);
+    }
+  function fnMove(seq){
+        var offset = $("#div" + seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 400);
+    }
+        function showHide(id) {
+
+            var obj = document.getElementById(id);
+
+            if (obj.style.display == 'none')
+
+                obj.style.display = 'block';
+
+            else
+
+                obj.style.display = 'none';
+
+        }   
+</script>
+<body>
+<div class="wrap">
+        <header>
+            <div class="innerHeader">
+                <h1 class="logo"><a href="index.html"><img src="img/logo_fff.png" alt="하얀색로고"></a></h1>
+                  <div class="menu_bar">
+                        <a id="burger" onclick="showHide('name')" onfocus="this.blur()"></a>
+                        <div id=name style="display:none">
+                           <div class="gnb_top">
+                               <h1><a href="index.html"></a></h1>
+                               <p class="top_sign"><a href="login.html"><img src="img/user.png" alt="로그인"></a></p>
+                               <div class="b-close">
+                                   <a onclick="showHide('name')" onfocus="this.blur()"></a>
+                               </div>
+                           </div>
+                            <ul class="menu_bar_gnb">
+                                <li><a href="about.html"  >ABOUT</a></li>
+                                <li><a href="company.html" >COMPANY</a></li>
+                                <li><a href="csr.html"     >CSR</a></li>
+                                <li><a href="pr.html"      >PR</a></li>
+                            </ul>
+                            <div class="gnb_bottom">
+                                <ul class="sns_list">
+                                        <li class="list1"><a href="#"></a></li>
+                                        <li class="list2"><a href="#"></a></li>
+                                        <li class="list3"><a href="#"></a></li>
+                                </ul>
+                                <p>COPYRIGHT ⓒ 2019 COOD</p>                                
+                            </div>
+                        </div>                        
+                    </div>
+               
+                <div class="gnb">
+                    <ul>
+                        <li><a href="about.html"  >ABOUT</a></li>
+                        <li><a href="company.html">COMPANY</a></li>
+                        <li><a href="csr.html"    >CSR</a></li>
+                        <li><a href="pr.html"     class="choice">PR</a></li>
+                    </ul>
+                </div>
+            <!--login-->
+            <div class="signin">
+                <a href="login.html" class="login"  target="_blank">Sign In</a>
+            </div>
+            <!--//login-->
+            
+            <!--sns-->
+                <nav class="sns">
+                    <a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-youtube-square"></i></a>
+                </nav>
+            <!--//sns--> 
+            </div>
+        </header> 
+<!--container-->
+        <section class="pr container">           
+                    <div class="sub_visual">
+                        <h3 class="eng tracking-in-expand-fwd">PR</h3>
+                    </div>
+                <div class="section_sub">
+                    <div class="content">
+                            <div>
+                               <button onclick="fnMove('1')">Cood News</button>
+                                <button onclick="fnMove('2')">CH.Cood</button>
+                                <button onclick="fnMove('3')">Cood Ci/bi</button>
+                            </div>
+                    </div>
+                    </div>
+                <div class="section news_board" id="div1">
+                    <div class="content">
+                        <p class="title">언론보도</p>
+                        <div class="new_board_wrap">
+                            <ul class="tab_st">
+                                <li class="active"><a href="#">보도자료</a></li>
+                                <li><a href="#">언론기사</a></li>
+                            </ul>
+                            <div class="board">
+                                <div class="board_top">
+                                    <p class="total">총<span>66건</span></p>
+
+                                    <div class="search_wrap">
+                                        <input type="text" id="report_title">
+                                        <a href="#" class="btn_search"><img src="img/btn_search.jpg" alt="검색"></a>
+                                    </div>
+                                </div>
+                                <div class="board_title">
+                                    <p class="title1">번호</p>
+                                    <p class="title2">제목</p>
+                                    <p class="title3">보도일자</p>
+                                    <p class="title4">내용보기</p>
+                                </div>
+                                <ul id="report_li">
+                                    <li>
+                                        <p class="text1">66</p>
+                                        <p class="text2"><a href="#">쿠드, 국내 대표 친환경 유기농 브랜드 ‘초록마을’과 배달서비스 활성화 위한 업무협약 체결</a></p>
+                                        <p class="text3">2019-10-15</p>
+                                        <p class="text4"><a href="#"></a></p>
+                                    </li>
+                                    <li>
+                                        <p class="text1">65</p>
+                                        <p class="text2"><a href="#">쿠드, 아프리카 식수 지원사업에 기부</a></p>
+                                        <p class="text3">2019-10-15</p>
+                                        <p class="text4"><a href="#"></a></p>
+                                    </li>
+                                    <li>
+                                        <p class="text1">64</p>
+                                        <p class="text2"><a href="#">새로운 소울푸드 한식 드디어 찾았다. 한식전쟁 일어나나..</a></p>
+                                        <p class="text3">2019-10-15</p>
+                                        <p class="text4"><a href="#"></a></p>
+                                    </li>
+                                    <li>
+                                        <p class="text1">63</p>
+                                        <p class="text2"><a href="#">문화식품관광부, 쿠드 중국 국내 진출 검토 중, 발뻗는 한식</a></p>
+                                        <p class="text3">2019-10-15</p>
+                                        <p class="text4"><a href="#"></a></p>
+                                    </li>
+                                    <li>
+                                        <p class="text1">62</p>
+                                        <p class="text2"><a href="#">기업 품질 부적합 폐기되는 식품기업들.. 정말 쿠드만 안전한가</a></p>
+                                        <p class="text3">2019-10-15</p>
+                                        <p class="text4"><a href="#"></a></p>
+                                    </li>
+                                    <li>
+                                        <p class="text1">61</p>
+                                        <p class="text2"><a href="#">20대 식품조리 선호 1위 쿠드라고 밝혀져,"건강하고 맛있는 식품 선호"</a></p>
+                                        <p class="text3">2019-10-15</p>
+                                        <p class="text4"><a href="#"></a></p>
+                                    </li>
+                                    <li>
+                                        <p class="text1">60</p>
+                                        <p class="text2"><a href="#">벤처기업 '쿠드' 식품 안전 상 수상 '혁신을 불러 일으키다'</a></p>
+                                        <p class="text3">2019-10-15</p>
+                                        <p class="text4"><a href="#"></a></p>
+                                    </li> 
+                                    <li>
+                                        <p class="text1">59</p>
+                                        <p class="text2"><a href="#">쿠드가 10년만에 이렇게 성장한 이유, 시작된 스타트업의 신화</a></p>
+                                        <p class="text3">2019-10-15</p>
+                                        <p class="text4"><a href="#"></a></p>
+                                    </li> 
+                                    <li>
+                                        <p class="text1">58</p>
+                                        <p class="text2"><a href="#">배달앱보다 간편조리가 대세...현대인 식문화 책임진다</a></p>
+                                        <p class="text3">2019-10-15</p>
+                                        <p class="text4"><a href="#"></a></p>
+                                    </li>  
+                                    <li>
+                                        <p class="text1">58</p>
+                                        <p class="text2"><a href="#">쿠드, '반값'할인 프로모션 진행</a></p>
+                                        <p class="text3">2019-10-15</p>
+                                        <p class="text4"><a href="#"></a></p>
+                                    </li>                                               
+                                </ul>
+                                 
+                                <div class="pager">
+                                    <ul>
+                                        <li class="first"><a href="#"><img src="img/pager_ar_left.png" alt="이전페이지"></a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li class="last"><a href="#"><img src="img/pager_ar_right.png" alt="다음페이지"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>                  
+                    <div class="hotdill">
+                        <div class="content">
+                            <div class="title">
+                                <p>HOTDILL</p>
+                                <span class="dash"><img src="img/slide_count_bar.png" alt=""></span>
+                                <p class="text_mobile">핫딜은 앱에서 확인하실 수 있습니다.</p>
+                            </div>
+                        </div>
+                    </div>                                   
+                    <div class="ch_cood"  id="div2">
+                        <div class="content">
+                            <p class="title">CH.COOD</p>
+                            <div class="view_wrap">
+                                <div class="view"><a href="#"><img src="img/videobg_1.png" alt=""></a></div>
+                                <p class="sub_title"><b>[쿠드]</b> Cood Youtube BEST 영상</p>
+                                <p class="data">2019-10-11</p>
+                            </div>
+                            <div class="video_li">
+                                <ul class="cood_li">
+                                    <li class="li1">
+                                        <div class="thumb">
+                                            <p class="img">
+                                                <img src="img/videobg_2.png" alt="썸네일">
+                                            </p>
+                                            <div class="mask"><a href="#"></a></div>
+                                        </div>
+                                        <div class="text">
+                                            <p class="thumb_title">[쿠드] 얼큰한 순두부를 만들어 볼…</p>
+                                            <p class="data">2019-10-11</p>
+                                        </div>
+                                    </li>
+                                    <li class="li2">
+                                        <div class="thumb">
+                                            <p class="img">
+                                                <img src="img/videobg_3.png" alt="썸네일">
+                                            </p>
+                                            <div class="mask"><a href="#"></a></div>
+                                        </div>
+                                        <div class="text">
+                                            <p class="thumb_title">[쿠드] 드디어 아기다리고기다리…</p>
+                                            <p class="data">2019-10-11</p>
+                                        </div>
+                                    </li>
+                                    <li class="li3">
+                                        <div class="thumb">
+                                            <p class="img">
+                                                <img src="img/videobg_4.png" alt="썸네일">
+                                            </p>
+                                            <div class="mask"><a href="#"></a></div>
+                                        </div>
+                                        <div class="text">
+                                            <p class="thumb_title">[쿠드] 맛있으면 0칼로리,도넛강…</p>
+                                            <p class="data">2019-10-11</p>
+                                        </div>
+                                    </li>                                        
+                                    <li class="li4">
+                                        <div class="thumb">
+                                            <p class="img">
+                                                <img src="img/videobg_5.png" alt="썸네일">
+                                            </p>
+                                            <div class="mask"><a href="#"></a></div>
+                                        </div>
+                                        <div class="text">
+                                            <p class="thumb_title">[쿠드] 만들기 어렵지 않아요 오늘…</p>
+                                            <p class="data">2019-10-11</p>
+                                        </div>
+                                    </li>                                                                        
+                                </ul>
+                                <div class="pager">
+                                    <ul>
+                                        <li class="first"><a href="#"><img src="img/pager_ar_left.png" alt="이전페이지"></a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li class="last"><a href="#"><img src="img/pager_ar_right.png" alt="다음페이지"></a></li>                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                    <div class="ci_bi"  id="div3">
+                        <div class="content">
+                            <p class="logo_title">CI / BI</p>
+                            <div class="view_wrap">
+                                <div class="view"><img src="img/ci_bi_img.png" alt="로고"></div>
+                                <div class="bottom">
+                                    <p><img src="img/color123.png" alt="로고색깔"></p>
+                                    <div class="description">
+                                        <p class="title">로고타입 색상</p>
+                                        <p class="text">노란색,빨간색,검정색 세가지 원색을 사용하여 브랜드가치를 구축하고 있습니다.<br>다양한 색상은 우리의 유연함과 혁신적이고 재치 있는 브랜드 속성을 나타냅니다.</p>
+                                    </div>
+                                    <div class="btn_ci_down">
+                                        <a href="#"><img src="img/btn_ci_down.png" alt="CI다운로드"></a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                    
+              
+        </section>
+<!--footer -->
+        <footer>
+            <div class="footer_inner">
+                <h2 class="ftLogo"><a href="index.html"><img src="img/logo.png" alt="쿠드"></a></h2>
+                <ul class="address">
+                    <li><strong>(주)쿠드</strong></li>
+                    <li>서울특별시 서초구 서초동 1305</li>
+                    <li>Copyrightⓒ2019 COOD Korea All right reserved.</li>
+                </ul>
+                <ul class="ft_sns">
+                        <li><a href="#"><img src="img/sns_f.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="img/sns_i.png" alt="instagram"></a></li>
+                        <li><a href="#"><img src="img/sns_u.png" alt="youtube"></a></li>
+                </ul>
+            </div>
+        </footer>           
+    </div>    
+</body>
+</html>

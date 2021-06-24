@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick_two.css">
+    <!--script-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script_main.js"></script>
+    <!--플러그인-->
+    <script type="text/javascript" src="js/jquery.fullpage.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script type="text/javascript" src="js/slick_two.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script> 
+  <script src="js/jquery.slides.min.js"></script>      
+       <script>
+      $(function() {
+      $('#slides').slidesjs({
+        width: 940,
+        height: 528
+      });
+    });
+   function fnMove(seq){
+        var offset = $("#div" + seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 400);
+    }
+        </script>  
+</head>
+<body>
+
+    <div id="wrap">
+        <div class="fullPageWrap">
+               <div class="header">
+                            <div class="innerHeader trans">
+                               <div class="header_bg"></div>
+                                <h1 class="logo"><a href="index.html"><img class="change" src="img/logo_white.png" alt="로고"></a></h1>
+                                <div class="gnb">
+                                   <div class="menu_bg"></div>
+                                    <ul class="gnb_ul">
+                                        <li> <a  data-menuanchor="firstPage"  class="menu_a active" href="index.html" >HOME</a></li>
+                                        <li ><a class="menu_a"  href="about.html" >ABOUT</a></li>
+                                        <li ><a class="menu_a"  href="work.html" >WORK</a></li>
+                        
+                                    </ul>
+                                </div>                        
+                            </div>
+                         </div>           
+            <div id="fullpage">
+
+                <div class="section" id="section1">
+                            
+                <section class="main">
+                    <div class="home">
+                        <div class="text_box">
+                            <article class="text_item">
+                                
+                                    <div class="text_content">
+                                        <div class="home_tit">UI/UX DESIGNER</div>
+                        
+                                    <header class="home_sub_tit">
+                                        <p class="sub_tit">
+                                            HANSOYOUNG
+                                        </p>
+                                    </header>
+                                    <div class="home_detail">
+                                        <div class="uppercase">
+                                            As I want to do it, I have a desire to be more meticulous.<br>
+                        Creating a more attractive homepage to suit your tastes<br>
+                        With the desire to become ONLY.1, I walk the path of Web Publisher.
+                           
+                                        </div>
+                                        <div class="hello">
+                                        <span>H</span>
+                                        <span>e</span>
+                                        <span>l</span>
+                                        <span>l</span>
+                                        <span>o</span>
+                                        <span>:)</span>
+                                        </div>
+                                    </div>
+                                    </div> 
+  <div class="container">
+    <div id="slides">
+      <img src="img/picture_2.png" alt="">
+      <img src="img/picture_1.png" alt="">
+      <img src="img/picture_3.png" alt="">
+      <img src="img/picture_4.png" alt="">
+
+    </div>
+
+  </div>                           
+                                
+                            </article>
+
+                            
+                        </div>
+                    </div>
+                </section>
+                    </div>
+                    <div class="section" id="section2">
+                       <div class="profile">
+                           <div class="imgbox">
+                               <p class="img"><img src="img/profileimg2.jpg" alt="프로필이미지"></p>
+                               <div class="box"></div>
+                           </div>
+                           <div class="txtbox">
+                              
+                               <div class="txt_top">
+                                  <div class="line"></div>
+                                   <p>HANSOYOUNG<br><br><img src="img/sub_logo3.png" alt=""></p>
+                                   
+                               </div>
+                               <div class="txt_bottom">
+                                  <div class="line"></div>
+                                   <ul class="txt_left">
+                                       <li>Address_</li>
+                                       <li>Phone Number_</li>
+                                       <li>E-mail_</li>
+                                       <li>KakaoTalk_</li>
+                                   </ul>
+                                   <ul class="txt_right">
+                                       <li>서울특별시 송파구</li>
+                                       <li>010. 5385. 4427</li>
+                                       <li>szerohan@gmail.com</li>
+                                       <li>hsy906</li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
+                        <div class="call">
+                                <div class="call_img  wobble-hor-bottom">
+                                    <a href="mailto:szerohan@gmail.com"><img src="img/phone-contact2_2.png" alt="call"></a>
+                                </div>
+                            </div>
+                    </div>
+                    <!--오른쪽 고정 네비-->
+                   <ul class="rightNav">
+                    <li data-menuanchor="firstPage" class="active">
+                        <a href="#firstPage"><span>HOME</span></a>
+                    </li>
+                    <li data-menuanchor="secondPage" class="active">
+                        <a href="#secondPage"><span>CONTACT</span></a>
+                    </li>  
+                </ul>
+
+            </div>
+                            
+        </div>
+    </div>
+</body>
+</html>
